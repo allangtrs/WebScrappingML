@@ -1,28 +1,33 @@
-# Webscrapping de ofertas do Mercado Livre usando Scrapy
-Este projeto é um exemplo de como usar o framework Scrapy para fazer webscrapping de ofertas do dia no site do Mercado Livre e salvar os dados em um arquivo CSV.
+# Webscraping of Mercado Livre's Deals of the Day using Scrapy
+This is an example of how to use Scrapy to collect all the Deals of the Day on Mercado Livre's website and save the data to a CSV file. The code was developed in Python and can be easily adapted for other web scraping tasks.
 
-## Requisitos
-Antes de executar o código, certifique-se de ter o Scrapy instalado em sua máquina. Você pode instalar o Scrapy usando o seguinte comando:
+## Final Product
+The objective of the code is to collect the information of the Deals of the Day on Mercado Livre's website, including product name, price, link to the product page, and seller rating. The data is saved to a CSV file, which can be easily imported into other data analysis tools.
 
-'''pip install scrapy'''
-## Como executar o código
-1. Clone este repositório para sua máquina.
+## Tools Used
+The code was developed in Python 3 and uses the Scrapy library for web scraping. To save the data to a CSV file, the Python csv library was used.
 
-2. Navegue para a pasta do projeto.
+## Execution Process
+To execute the code, follow these steps:
 
-3. Execute o seguinte comando no terminal:
+1.  Ensure that Python 3 is installed on your machine.
 
-"scrapy crawl ofertas -o ofertas.csv"
+2.  Install Scrapy using the following command in the terminal:
 
-O Scrapy irá acessar o site do Mercado Livre e buscar todas as ofertas do dia. Os dados serão salvos no arquivo ofertas.csv.
+```
+pip install scrapy
+```
+3.  Clone the repository on your machine using the following command:
+```
+git clone https://github.com/your-username/webscraping-mercado-livre.git
+```
+4.  Navigate to the project folder and execute the following command in the terminal:
 
-## Entendendo o código
-O código do webscrapping está contido no arquivo ofertas_spider.py.
- A classe OfertasSpider define como o Scrapy deve buscar os dados no site do Mercado Livre.
+```
+scrapy crawl ofertas -o ofertas.csv
+```
+This command will initiate the web scraping process and save the data to a CSV file named "ofertas.csv".
 
-O método start_requests é chamado quando o Spider é iniciado e define qual página do site deve ser acessada para iniciar a busca.
-O método parse é responsável por extrair os dados da página e retornar um objeto Python com as informações desejadas.
-O comando "scrapy crawl ofertas -o ofertas.csv" é usado para executar o Spider e salvar os dados em um arquivo CSV.
+5.  Open the CSV file in a data analysis tool, such as Excel, to view and manipulate the collected data.
 
-## Conclusão
-O Scrapy é uma ferramenta poderosa para fazer webscrapping de sites. Com ele, é possível coletar dados de maneira eficiente e automatizada. Este projeto é apenas um exemplo simples de como usar o Scrapy para coletar dados do Mercado Livre, mas as possibilidades são infinitas.
+With this code, it is possible to collect Mercado Livre's Deals of the Day easily and efficiently, enabling data-driven analyses and decision-making.
