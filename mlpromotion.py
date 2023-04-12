@@ -23,7 +23,7 @@ class MlpromotionSpider(scrapy.Spider):
         if prox_pag is not None:
             yield response.follow(prox_pag, callback=self.parse)
 
-e
+
 
 
 
